@@ -31,5 +31,34 @@
     </form>
   </div>
   
+  <script>
+    function addParticipant() {
+        const tableBody = document.querySelector("#participantsTable tbody");
+        const nameInput = document.querySelector("#participantName");
+        const name = nameInput.value.trim();
+        if (name) {
+            const row = document.createElement("tr");
+            const nameCell = document.createElement("td");
+            nameCell.textContent = name;
+            row.appendChild(nameCell);
+    
+            const deleteButtonCell = document.createElement("td");
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.addEventListener("click", function() {
+            row.remove();
+            });
+            deleteButtonCell.appendChild(deleteButton);
+            row.appendChild(deleteButtonCell);
+
+            tableBody.appendChild(row);
+            nameInput.value = "";
+        }
+    }
+
+    document.querySelector("#addParticipantButton").addEventListener("click", addParticipant);
+
+  </script>
+
 </body>
 </html>
