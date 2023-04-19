@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Range App</title>
+</head>
+<body>
+  <form id="dateForm">
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate">
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate">
+    <button type="submit">Submit</button>
+  </form>
+
+  <table id="resultTable">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Day</th>
+        <th>Participant</th>
+        <th>Action</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+    <!-- Add this inside the form element -->
+    <button type="button" id="saveButton">Save</button>
+
+    <!-- Add this after the closing form tag -->
+    <p><a href="home.html">Go to Home</a></p>
+
+  <script src="app.js"></script>
+</body>
+</html>
